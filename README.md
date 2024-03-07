@@ -1,6 +1,6 @@
 # BlackCow_RiskManagement
 
-## 경북대학교 학생펀드 BlackCow Risk Management 활동 정리
+## 경북대학교 학생펀드 BlackCow Risk Management 파트 활동 정리
 ### Risk Management
 |Index |Code                                                                        |Report        |
 |----:|:---------------------------------------------------------------------------------|-----------:|
