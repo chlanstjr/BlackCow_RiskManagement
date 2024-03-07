@@ -82,7 +82,7 @@ def run():
     return msg_result
 
 async def main():
-    token = '6819434018:AAFkT0OG-Xsht6wZc4Hxqr8Xy-iXTpDcxP0'
+    token = 'telegram token'
     bot = telegram.Bot(token)
     await bot.send_message(chat_id="-4026107937", text=run())
 
