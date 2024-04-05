@@ -12,11 +12,11 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 korea_timezone = pytz.timezone('Asia/Seoul')
 
 def run():
-    x = datetime.datetime.now(korea_timezone) - datetime.timedelta(days=1)
+    x = datetime.datetime.now(korea_timezone)
     start_date = (x - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
     end_date = (x + datetime.timedelta(days=1)).strftime('%Y-%m-%d')
 
-    start_money = 7119323
+    start_money = 7311320
     # 수수료 및 세금
     charge_fee = 0.00015
     tax_fee = 0.002
