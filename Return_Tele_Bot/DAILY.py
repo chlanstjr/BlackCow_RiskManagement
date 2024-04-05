@@ -12,11 +12,11 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 korea_timezone = pytz.timezone('Asia/Seoul')
 
 def run():
-    x = datetime.datetime.now(korea_timezone)
+    x = datetime.datetime.now(korea_timezone) - datetime.timedelta(days=1)
     start_date = (x - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
     end_date = (x + datetime.timedelta(days=1)).strftime('%Y-%m-%d')
 
-    start_money = 7254044
+    start_money = 7119323
     # 수수료 및 세금
     charge_fee = 0.00015
     tax_fee = 0.002
@@ -24,7 +24,7 @@ def run():
     # RP, 현재 RP 가격 불러오도록 바꿔야함. RP는 고정수익률이니 수익률 측정은 의미 없음.
     rp = 0
     # 현금
-    cash = 557658
+    cash = 793764+508584
     # 주식
     stock_total = 0
     # sk하이닉스, 한국카본, 유진테크, 팅크웨어, 켐트로닉스, 테스, 서연이화
@@ -32,8 +32,8 @@ def run():
     stock_name = ['sk하이닉스', 'RFHIC', '유진테크', '팅크웨어', '켐트로닉스', '테스', '서연이화', '삼성전기','뉴로메카']
 
     stock_endprice = []
-    stock_cnt = [4,32,27,71,48,40,30,6,9]
-    stock_purchase_price = [131013,17520,42278,15549,23694,20438,16197,150150,39050]
+    stock_cnt = [4,39,10,37,49,26,30,7,9]
+    stock_purchase_price = [131013,16717,42278,15549,23681,20438,16197,149857,39050]
     stock_return = []
 
     # 포트폴리오 평가금
@@ -82,7 +82,7 @@ def run():
     return msg_result
 
 async def main():
-    token = 'telegram token'
+    token = '6819434018:AAFkT0OG-Xsht6wZc4Hxqr8Xy-iXTpDcxP0'
     bot = telegram.Bot(token)
     await bot.send_message(chat_id="-4026107937", text=run())
 
