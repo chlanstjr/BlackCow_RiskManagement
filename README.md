@@ -8,8 +8,6 @@
 |2023-12 |Asset Allocation|[link](https://github.com/chlanstjr/BlackCow_RiskManagement/blob/main/2023-12/BlackCow_12%EC%9B%94_%EB%A6%AC%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC%EB%A6%AC%ED%8F%AC%ED%8A%B8%20(2).pdf)|
 
 ## Blackcow
-홈페이지 : [link](https://knublackcow.my.canva.site/academicportfolio)
-
-노션 : [link](https://url.kr/2kqo57)
-
+홈페이지 : [link](https://knublackcow.my.canva.site/academicportfolio)  
+노션 : [link](https://url.kr/2kqo57)  
 텔레그램 : [link](https://t.me/knublackcow)
