@@ -14,9 +14,9 @@ korea_timezone = pytz.timezone('Asia/Seoul')
 def run():
     x = datetime.datetime.now(korea_timezone)
     start_date = (x - datetime.timedelta(days=7)).strftime('%Y-%m-%d')
-    end_date = (x + datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+    end_date = (x + datetime.timedelta(days=7)).strftime('%Y-%m-%d')
 
-    start_money = 7311320
+    start_money = 7745106
     # 수수료 및 세금
     charge_fee = 0.00015
     tax_fee = 0.002
@@ -24,16 +24,16 @@ def run():
     # RP, 현재 RP 가격 불러오도록 바꿔야함. RP는 고정수익률이니 수익률 측정은 의미 없음.
     rp = 0
     # 현금
-    cash = 793764+508584
+    cash = 863274
     # 주식
     stock_total = 0
     # sk하이닉스, 한국카본, 유진테크, 팅크웨어, 켐트로닉스, 테스, 서연이화
-    stock_ticker = ['000660.KS','218410.KQ','084370.KQ','084730.KQ','089010.KQ','095610.KQ','200880.KS','009150.KS','348340.KQ']
-    stock_name = ['sk하이닉스', 'RFHIC', '유진테크', '팅크웨어', '켐트로닉스', '테스', '서연이화', '삼성전기','뉴로메카']
+    stock_ticker = ['000660.KS','218410.KQ','084370.KQ','084730.KQ','089010.KQ','095610.KQ','200880.KS','009150.KS','348340.KQ','042660.KS']
+    stock_name = ['sk하이닉스', 'RFHIC', '유진테크', '팅크웨어', '켐트로닉스', '테스', '서연이화', '삼성전기','뉴로메카','한화오션']
 
     stock_endprice = []
-    stock_cnt = [4,39,10,37,49,26,30,7,9]
-    stock_purchase_price = [131013,16717,42278,15549,23681,20438,16197,149857,39050]
+    stock_cnt = [4,39,10,37,49,26,30,7,9,16]
+    stock_purchase_price = [131013,16717,42278,15549,23681,20438,16197,149857,39050,30350]
     stock_return = []
 
     # 포트폴리오 평가금
@@ -93,15 +93,9 @@ async def main():
         await asyncio.sleep(1000)
 
 if __name__ == '__main__':
-    # Execution will block here until Ctrl+C (Ctrl+Break on Windows) is pressed.
     try:
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):
         pass
 
-if __name__ == '__main__':
-    # Execution will block here until Ctrl+C (Ctrl+Break on Windows) is pressed.
-    try:
-        asyncio.run(main())
-    except (KeyboardInterrupt, SystemExit):
-        pass
+print(run())
